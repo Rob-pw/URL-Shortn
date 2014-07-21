@@ -1,0 +1,23 @@
+{
+  "name": "URL-Shortn",
+  "version": "0.0.0",
+  "description": "Open-source bespoke URL shortener, allows any base to be used (even above base-64). Example: http://f.oo/$",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Base-n",
+    "URL",
+    "shortener",
+    "bespoke"
+  ],
+  "author": "Rob PW",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^2.0.0-alpha.4",
+    "hapi": "^6.2.0",
+    "hapi-mongodb": "^2.2.0",
+    "mongoose": "^3.8.13"
+  }
+}
