@@ -1,10 +1,17 @@
+var mongoose = require('mongoose')
+,	URLSchema = require('../models/schema/URL.js')
+,	URL = mongoose.model('URL', URLSchema)
+
+var URLs = require('../controllers/')
+
+
 var handlers = {
 	url : {
 		list : function (request, reply) {
-			reply({"one":1, "two": 2});
+			reply("Sorry");
 		},
 		add : function (request, reply) {
-
+			console.log(request.body);
 		},
 		remove : function (request, reply) {
 
@@ -25,6 +32,18 @@ var routes = [
 		path: '/url/',
 		config : {
 			handler: handlers.url.list
+		}
+	},
+	{
+		method: 'PUT',
+		path: '/url/',
+		config : {
+			handler: handlers.url.add,
+			validate : {
+				query : {
+					url : 
+				}
+			}
 		}
 	},
 	{
