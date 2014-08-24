@@ -1,4 +1,6 @@
 module.exports = {
 	server : require('./server.js'),
-	api : require('./api.js')
+	api : {
+		port: 3000
+	}
 };
